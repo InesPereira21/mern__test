@@ -62,8 +62,6 @@ app.use((req, res, next) => {
     next()
 })
 
-
-
 // routes
 app.use("/api/workouts", workoutRoutes)
 
@@ -75,8 +73,6 @@ mongoose.connect(process.env.MONGO_URI)
         app.listen(port, () => {
             console.log('Connected to DB & Listening on port: ' + port)
         })
-
-
     })
     .catch((error) => {
         console.log(error)
